@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{96456FB6-C221-4901-B171-8D6EADA30DDB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesignPatterns</RootNamespace>
+    <AssemblyName>DesignPatterns</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behavioral\ChainOfResponsibilitiesPattern.cs" />
+    <Compile Include="Behavioral\CommandPattern.cs" />
+    <Compile Include="Behavioral\InterpreterPattern.cs" />
+    <Compile Include="Behavioral\IteratorPattern.cs" />
+    <Compile Include="Behavioral\MediatorPattern.cs" />
+    <Compile Include="Behavioral\MementoPattern.cs" />
+    <Compile Include="Behavioral\ObserverPattern.cs" />
+    <Compile Include="Behavioral\StatePattern.cs" />
+    <Compile Include="Behavioral\StrategyPattern.cs" />
+    <Compile Include="Behavioral\TemplateMethodPattern.cs" />
+    <Compile Include="Behavioral\VisitorPattern.cs" />
+    <Compile Include="Creational\AbstractFactoryPattern.cs" />
+    <Compile Include="Creational\BuilderPattern.cs" />
+    <Compile Include="Creational\FactoryMethodPattern.cs" />
+    <Compile Include="Creational\PrototypePattern.cs" />
+    <Compile Include="Creational\SingletonPattern.cs" />
+    <Compile Include="Others\RepositoryPattern.cs" />
+    <Compile Include="Others\SOLIDPrinciples\DependencyInversionPrinciple.cs" />
+    <Compile Include="Others\SOLIDPrinciples\InterfaceSegrigationPrinciple.cs" />
+    <Compile Include="Others\SOLIDPrinciples\LiskovSubstitutionPrinciple.cs" />
+    <Compile Include="Others\SOLIDPrinciples\OpenClosedPrinciple.cs" />
+    <Compile Include="Others\SOLIDPrinciples\SingleResponsibilityPrinciple.cs" />
+    <Compile Include="Others\UnitOfWorkPattern.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structural\AdapterPattern.cs" />
+    <Compile Include="Structural\BridgePattern.cs" />
+    <Compile Include="Structural\CompositePattern.cs" />
+    <Compile Include="Structural\DecoratorPattern.cs" />
+    <Compile Include="Structural\FacadePattern.cs" />
+    <Compile Include="Structural\FlyweightPattern.cs" />
+    <Compile Include="Structural\ProxyPattern.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
